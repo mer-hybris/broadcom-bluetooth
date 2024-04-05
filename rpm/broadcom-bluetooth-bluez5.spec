@@ -14,17 +14,15 @@ Obsoletes: broadcom-bluetooth <= 1.0.4
 Broadcom Bluetooth utilities
 
 %prep
-%setup -q -n %{name}-%{version}/broadcom-bluetooth
+%autosetup -n %{name}-%{version}/broadcom-bluetooth
 
 %build
-make
+%make_build
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 %files
-%defattr(-,root,root,-)
 %{_sbindir}/brcm_patchram_plus
 %{_sbindir}/brcm_patchram_plus_h5
 %{_sbindir}/brcm_patchram_plus_usb

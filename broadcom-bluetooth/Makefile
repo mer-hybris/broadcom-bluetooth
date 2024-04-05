@@ -30,7 +30,7 @@ brcm_patchram_plus : brcm_patchram_plus.o
 brcm_patchram_plus_usb : brcm_patchram_plus_usb.o
 
 install:
-	mkdir -p $(INSTALL_ROOT)/usr/sbin
-	install brcm_patchram_plus $(INSTALL_ROOT)/usr/sbin
-	install brcm_patchram_plus_h5 $(INSTALL_ROOT)/usr/sbin
-	install brcm_patchram_plus_usb $(INSTALL_ROOT)/usr/sbin
+	mkdir -p $(DESTDIR)/usr/sbin
+	install brcm_patchram_plus $(DESTDIR)/usr/sbin
+	install brcm_patchram_plus_h5 $(DESTDIR)/usr/sbin
+	install brcm_patchram_plus_usb $(DESTDIR)/usr/sbin
